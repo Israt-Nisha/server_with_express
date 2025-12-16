@@ -10,10 +10,10 @@ app.use(express.json());
 // app.use(express.urlencoded());
 
 // logger middleware
-// const logger = (req: Request, res: Response, next: NextFunction) => {
-//   console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}\n`);
-//   next();
-// };
+const logger = (req: Request, res: Response, next: NextFunction) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}\n`);
+  next();
+};
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello Next level!')
