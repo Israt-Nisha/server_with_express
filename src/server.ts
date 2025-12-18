@@ -15,7 +15,7 @@ const logger = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-app.get('/',logger, (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello Next level!')
 })
 
