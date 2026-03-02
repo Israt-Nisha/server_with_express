@@ -14,10 +14,10 @@ const logger = (req: Request, res: Response, next: NextFunction) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}\n`);
   next();
 };
-// const loggerNext = (req: Request, res: Response, next: NextFunction) => {
-//   console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}\n`);
-//   next();
-// };
+const loggerNext = (req: Request, res: Response, next: NextFunction) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}\n`);
+  next();
+};
 
 app.get('/',logger, (req: Request, res: Response) => {
   res.send('Hello Next level!')
